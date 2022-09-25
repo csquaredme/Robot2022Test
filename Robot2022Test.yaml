@@ -16,8 +16,8 @@ Children:
               name: CAN ID
               validators: &id002 [CANID]
               value: '1'
-          Base: Talon SRX
-          Name: Talon SRX 1
+          Base: Victor SPX
+          Name: Victor SPX 1
         - Children: []
           Properties:
             CAN ID: !!robotbuilder.data.properties.ChoicesProperty
@@ -26,21 +26,21 @@ Children:
               name: CAN ID
               validators: *id002
               value: '2'
-          Base: Talon SRX
-          Name: Talon SRX 2
+          Base: Victor SPX
+          Name: Victor SPX 2
         Properties:
           MotorController2: !!robotbuilder.data.properties.ChildSelectionProperty
             default: 1
             name: MotorController2
             type: PIDOutput
             validators: &id003 [MotorControllerGroup, ChildDropdownSelected]
-            value: Talon SRX 2
+            value: Victor SPX 2
           MotorController1: !!robotbuilder.data.properties.ChildSelectionProperty
             default: 0
             name: MotorController1
             type: PIDOutput
             validators: &id004 [MotorControllerGroup, ChildDropdownSelected]
-            value: Talon SRX 1
+            value: Victor SPX 1
           MotorController4: !!robotbuilder.data.properties.ChildSelectionProperty {
             default: null, name: MotorController4, type: PIDOutput, validators: null,
             value: null}
@@ -58,8 +58,8 @@ Children:
               name: CAN ID
               validators: *id002
               value: '3'
-          Base: Talon SRX
-          Name: Talon SRX 3
+          Base: Victor SPX
+          Name: Victor SPX 3
         - Children: []
           Properties:
             CAN ID: !!robotbuilder.data.properties.ChoicesProperty
@@ -68,21 +68,21 @@ Children:
               name: CAN ID
               validators: *id002
               value: '4'
-          Base: Talon SRX
-          Name: Talon SRX 4
+          Base: Victor SPX
+          Name: Victor SPX 4
         Properties:
           MotorController2: !!robotbuilder.data.properties.ChildSelectionProperty
             default: 1
             name: MotorController2
             type: PIDOutput
             validators: *id003
-            value: Talon SRX 4
+            value: Victor SPX 4
           MotorController1: !!robotbuilder.data.properties.ChildSelectionProperty
             default: 0
             name: MotorController1
             type: PIDOutput
             validators: *id004
-            value: Talon SRX 3
+            value: Victor SPX 3
           MotorController4: !!robotbuilder.data.properties.ChildSelectionProperty {
             default: null, name: MotorController4, type: PIDOutput, validators: null,
             value: null}
@@ -183,10 +183,10 @@ Children:
       Requires: !!robotbuilder.data.properties.TypeSelectionProperty {default: None,
         name: Requires, type: Subsystem, validators: null, value: DriveBase}
       Parameter presets: !!robotbuilder.data.properties.ParameterSetProperty
-        default: &id005 []
+        default: []
         name: Parameter presets
         validators: null
-        value: *id005
+        value: []
       Button on SmartDashboard: !!robotbuilder.data.properties.BooleanProperty {default: true,
         name: Button on SmartDashboard, validators: null, value: false}
     Base: Command
